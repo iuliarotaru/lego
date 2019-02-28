@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('fonts/oswald-regular-webfont.eot');
+    src: url('fonts/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/oswald-regular-webfont.woff2') format('woff2'),
+         url('fonts/oswald-regular-webfont.woff') format('woff'),
+         url('fonts/oswald-regular-webfont.ttf') format('truetype'),
+         url('fonts/oswald-regular-webfont.svg#oswaldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* phone  */
+@media (max-width:1000px){
+	body {
+		margin:0;
+	}
+
+	.about {
+		display:block;
+	}
+}
+
+/* desktop  */
+@media (min-width:1000px){
+	body {
+		margin-left:5vw;
+		margin-right:5vw;
+	}
+
+	.about {
+		display:none;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+.mainMenu {
+	display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(600px, 1fr) );
+}
+
+.mainMenuSection {
+	width:100%;
+	position: relative;
+	background-image: url('img/lego1x1.png');
+	background-repeat: repeat;
+	background-size: 10px;
+}
+.gradient {
+	position:absolute;
+	z-index:-1000;
+	width:100%;
+	height:100%;
+}
+.mainMenuSection img {
+	width: 100%;
+}
+
+.hide { display: none }
+
+.bgColorGradientVehicle { background-image: linear-gradient(0deg, #9f3224, red, #9f3224) }
+.bgColorGradientAircraft { background-image: linear-gradient(0deg, #4298cc, #3BC1EA, #4298cc) }
+.bgColorGradientCreature { background-image: linear-gradient(0deg, #81bc00, #94C518, #81bc00) }
+.bgColorGradientBuildings { background-image: linear-gradient(0deg, #cb9f00, #FED201, #cb9f00) }
+.bgColorGradientAbout { background-image: linear-gradient(0deg, #787a79, #A6A4A4, #787a79) }
+
+.bgColorLinearVehicle { background-color: red }
+.bgColorLinearAircraft { background-color: #3BC1EA }
+.bgColorLinearCreature { background-color: #94C518 }
+.bgColorLinearBuildings { background-color: #FED201 }
+
+
+.topMenu {
+	height: 2em;
+	display:grid;
+	grid-template-columns: 5fr 5em 7em 6em 6em 6em 6em;
+	grid-gap: 1em;
+	margin-top:3em;
+	margin-bottom:3em;
+}
+.topMenuPosition {
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	font-family: 'oswaldregular';
+	font-size:1.5em;
+	float:right;
+	background:none;
+	border:none;
+}
+.topMenuPosition:hover,
+.topMenuSelected  {
+	border-radius: 2em;
+	background-color:black;
+	color:white;
+}
+
+/*// Animating Logo //*/
+.logoWrapper {
+	float: left;
+	max-width: 100%;
+	transform: scale(0.3); 
+	/* to scale the logo animation */
+	position: relative;
+}
+
+.brick {
+	position: absolute;
+	width: 39px;
+}
+
+.redBlock {
+	left: 165px;
+	top: 76px;
+	-webkit-animation: redDrop 0.2s linear;
+	-moz-animation: redDrop 0.2s linear;
+	-ms-animation: redDrop 0.2s linear;
+	-o-animation: redDrop 0.2s linear;
+	animation: redDrop 0.2s linear;
+}
+
+@keyframes redDrop {
+	from {	top: -300px; }
+}
+
+.greenBlock {
+	left: 165px;
+	top: 31px;
+	-webkit-animation: greenDrop 0.2s linear 0.3s backwards;
+	-moz-animation: greenDrop 0.2s linear 0.3s backwards;
+	-ms-animation: greenDrop 0.2s linear 0.3s backwards;
+	-o-animation: greenDrop 0.2s linear 0.3s backwards;
+	animation: greenDrop 0.2s linear 0.3s backwards;
+}
+
+@keyframes greenDrop {
+	from { top: -300px;	}
+}
+
+.yellowBlock {
+	left: 172px;
+	top: -9px;
+	-webkit-animation: yellowDrop 0.3s ease-out 0.6s both;
+	-moz-animation: yellowDrop 0.3s ease-out 0.6s both;
+	-ms-animation: yellowDrop 0.3s ease-out 0.6s both;
+	-o-animation: yellowDrop 0.3s ease-out 0.6s both;
+	animation: yellowDrop 0.3s ease-out 0.6s both;
+}
+
+@keyframes yellowDrop {
+	0% { top: -300px; }
+	70% {
+		top: 4px;
+		transform: rotate(0deg)
+	}
+	100% { transform: rotate(16deg)	}
+}
+
+
+.logo {
+	position: absolute;
+	max-width: 621px;
+	min-width: 621px;
+	-webkit-animation: fadein 1.5s;
+	-moz-animation: fadein 1.5s;
+	-ms-animation: fadein 1.5s;
+	-o-animation: fadein 1.5s;
+	animation: fadein 1.5s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+main {
+	margin-top:5em;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+	grid-gap: 5em;  
+}
+
+section img {
+	max-height:60%;
+	max-width:90%;
+	margin-left:1em;
+	margin-right:1em;
+}
+section p {
+	margin-left:1em;
+	margin-right:1em;
+	font-family: 'oswaldregular';
+}
+section h2 {
+	text-align: center;
+	padding-top:1em;
+	font-family: 'oswaldregular';
+}
+
+article section {
+	height:30em;
+	border-radius: 2px;
+	border-color: #000;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position:relative;
+}
+
+.control{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	background-image: url('img/lego1x1.png');
+	background-repeat: repeat;
+	background-size: 10px;
+	text-align: center;
+	font-size:2em;
+	padding-top:0.2em;
+	padding-bottom:0.1em;
+	cursor:pointer;
+	font-family: 'oswaldregular';
+}
+/*Styling close button */
+
+
+/* flip */
+.under { display: none }
+.turnDissapearC { animation: turnDissapear 0.2s linear forwards }
+.turnAppearC { animation: turnAppear 0.2s linear forwards }
+
+@keyframes turnDissapear {
+	100% { transform: rotate3d(0, 1, 0, 90deg); }
+}
+						
+@keyframes turnAppear {
+	0% { transform: rotate3d(0, 1, 0, 90deg); }
+	100% { transform: rotate3d(0, 1, 0, 0deg); }
+}
+/* Styling burger menu */
+.nav{
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+.menu{
+     position: absolute;
+    right: 0;
+}
+button{
+    color: gray;
+    line-height: 70px;
+   
+}
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+#toggle {
+display: none;}
+
+@media only screen and (max-width: 650px) {
+    .nav{
+        text-align: right;
+    }
+    label {
+        display:block;
+        cursor: pointer;
+        margin: 0;
+    }
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: none;
+        z-index: 1;
+        background-color: antiquewhite;
+    }
+    .topMenuPosition {float:none}
+    button{
+        display: block;
+        margin: 0;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+    .scaleLogo{
+        left:  0;
+        position: absolute;
+    }
+    .mainMenuSection img {
+        width: 100%;
+    }
+    .mainMenuSection{
+        width: 100vw;
+    }
+    .logoWrapper{
+        position: absolute;
+        left:auto;
+        right:100px;
+        
+    }
+
+}
