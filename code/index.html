@@ -21,16 +21,24 @@
 			</div>
 		</div>
 		<div class="nav">
-	    <label for="toggle">&#9776</label>
+	    <label for="toggle" id="burgerMenu">&#9776</label>
 	    <input type="checkbox" id="toggle"/>
          <div class="menu">
+
+        <label for="toggle" id="closeBtn">&#10006</label>
          
-		<button id="menuHome" class="topMenuPosition topMenuSelected" data-category="Home" onclick="home()">Home</button>
-		<button id="menuCreature" class="topMenuPosition" data-category="Creature" onclick="changeCategory('Creature')">Creatures</button>
-		<button id="menuAircraft" class="topMenuPosition" data-category="Aircraft" onclick="changeCategory('Aircraft')">Aircraft</button>
-		<button id="menuVehicle" class="topMenuPosition" data-category="Vehicle" onclick="changeCategory('Vehicle')">Vehicles</button>
-		<button id="menuBuildings" class="topMenuPosition" data-category="Buildings" onclick="changeCategory('Buildings')">Buildings</button>
-		<button id="menuAbout" class="topMenuPosition" data-category="About" onclick="showAbout()">About Us</button>
+       <button id="menuHome" class="topMenuPosition topMenuSelected" data-category="Home" onclick="home()"><label for="toggle">Home</label></button>
+
+       <button id="menuCreature" class="topMenuPosition" data-category="Creature" onclick="changeCategory('Creature')"><label for="toggle">Creatures</label></button>
+
+       <button id="menuAircraft" class="topMenuPosition" data-category="Aircraft" onclick="changeCategory('Aircraft')"><label for="toggle">Aircraft</label></button>
+
+       <button id="menuVehicle" class="topMenuPosition" data-category="Vehicle" onclick="changeCategory('Vehicle')"><label for="toggle">Vehicles</label></button>
+
+
+        <button id="menuBuildings" class="topMenuPosition" data-category="Buildings" onclick="changeCategory('Buildings')"><label for="toggle">Buildings</label></button>
+
+            <button id="menuAbout" class="topMenuPosition" data-category="About" onclick="showAbout()"><label for="toggle"> About Us</label></button>
 		</div>
 		</div>
 	</nav>

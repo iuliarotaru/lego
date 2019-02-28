@@ -227,7 +227,6 @@ article section {
 	cursor:pointer;
 	font-family: 'oswaldregular';
 }
-/*Styling close button */
 
 
 /* flip */
@@ -254,11 +253,11 @@ article section {
     right: 0;
 }
 button{
-    color: gray;
+    color: grey;
     line-height: 70px;
    
 }
-label {
+#burgerMenu {
     margin: 0 40px 0 0;
     font-size: 26px;
     line-height: 70px;
@@ -267,22 +266,24 @@ label {
 }
 #toggle {
 display: none;}
-
+#closeBtn{
+    display: none;
+}
 @media only screen and (max-width: 650px) {
     .nav{
         text-align: right;
     }
-    label {
+    #burgerMenu {
         display:block;
         cursor: pointer;
         margin: 0;
     }
     .menu{
-        text-align: center;
         width: 100%;
         display: none;
         z-index: 1;
-        background-color: antiquewhite;
+        background-color: black;
+
     }
     .topMenuPosition {float:none}
     button{
@@ -310,6 +311,12 @@ display: none;}
         left:auto;
         right:100px;
         
+    }
+    #closeBtn{
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
     }
 
 }
